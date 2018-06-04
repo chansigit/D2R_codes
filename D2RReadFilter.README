@@ -1,0 +1,5 @@
+Usage: 
+D2RReadFilter    reads.fa    kmersize    threshold    pt pc pg pa
+
+Example:
+D2RReadFilter    reads.fa    7    0.00015    17 34 34 17

@@ -3,3 +3,5 @@ D2RReadFilter    reads.fa    kmersize    threshold    pt pc pg pa
 
 Example:
 D2RReadFilter    reads.fa    7    0.00015    17 34 34 17
+or
+java -jar D2RReadFilter.jar    reads.fa    7    0.00015    17 34 34 17

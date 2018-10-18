@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="D2RReadFilter:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/D2RReadFilter_jar</output-path>
+    <root id="archive" name="D2RReadFilter.jar">
+      <element id="module-output" name="D2RReadFilter" />
+    </root>
+  </artifact>
+</component>

@@ -23,6 +23,7 @@ public class D2RReadFilter {
         //System.out.println(sInfo.toString());
         D2RStream computingCenter = new D2RStream(sInfo);
         ArrayList<String> rawSequences = new ArrayList<>();
+        ArrayList<String> identifiers =new ArrayList<>();
         //========================================================================
         //========================================================================
 
@@ -43,6 +44,7 @@ public class D2RReadFilter {
                     System.out.printf("%s: ", line.substring(1));
                     */
                     ;
+                    identifiers.add(line);
                 } else {
                     cnt++;
                     //System.out.println(line);
@@ -68,13 +70,26 @@ public class D2RReadFilter {
         System.out.println("Output sequences with repeats:");
         startTime=System.currentTimeMillis();   //获取开始时间
         int repCnt = 0;
-        for(int i=0;i!=values.size();++i){
-            if (values.get(i)> threshold){
-                System.out.println("D2R stat of >#"+i+" ="+values.get(i));
-                System.out.println(rawSequences.get(i));
-                repCnt++;
+
+        try{
+            FileWriter fw = new FileWriter(readFile+"_filtered.fasta");
+            for(int i=0;i!=values.size();++i){
+                if (values.get(i)> threshold){
+                    ///System.out.println("D2R stat of >#"+i+" ="+values.get(i));
+                    //System.out.println(identifiers.get(i));
+                    //System.out.println(rawSequences.get(i));
+                    fw.write(identifiers.get(i)+"\n");
+
+                    fw.write(rawSequences.get(i)+"\n");
+                    repCnt++;
+                }
             }
+            fw.close();
+        }catch (IOException e){
+            System.out.println("IO Exceptions!");
         }
+
+
         endTime=System.currentTimeMillis(); //获取结束时间
         System.out.printf("Output finished, capturing %d reads out of total %d reads, taking %d ms.", repCnt,cnt,(endTime-startTime));
 

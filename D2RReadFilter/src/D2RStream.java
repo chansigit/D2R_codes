@@ -21,7 +21,13 @@ public class D2RStream {
         Float pr=1.0f;
         for (int i=0;i!=w.length();++i) {
             char ch = w.charAt(i);
-            pr *= seqInfo.letterPr[(int) ch];
+            if (ch=='T'||ch=='C'||ch=='G'||ch=='A'||
+                    ch=='t'||ch=='c'||ch=='g'||ch=='a'){
+                pr *= seqInfo.letterPr[(int) Character.toLowerCase(ch)];
+            }else{
+                pr *=1.0f;
+            }
+
         }
         return pr;
     }

@@ -33,7 +33,7 @@ D2Rscanner E:\code\D2R\CRISPR\genomes\NC_010162.fa  1000  7
 ```
 
 
-## 2. D2R library
+## 3. D2R library
 A python library for hacking.
 Written in swig, supporting Win64 and Linux64 environment currently.
 Copy files under `release_win_x64` or `release_linux_x64` to your working directory and 

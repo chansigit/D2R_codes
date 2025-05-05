@@ -4,7 +4,7 @@ This is the official repository for D2R, a tool that measures how repetitive a D
 
 We currently offer several ways to use D2R, and we welcome contributions that make it even easier to access and run.
 
-## 1. D2RReadFilter
+## 1. D2RReadFilter (JAVA package)
 A java package for filtering of sequencing reads. 
 Only reads with D2R value higher than the threshold will be kept.
 
@@ -19,7 +19,7 @@ Example:
 java -jar D2RReadFilter.jar    reads.fa    7    0.00015    17 34 34 17
 ```
 
-## 2. D2RGenomeScanner
+## 2. D2RGenomeScanner (C++ program)
 A genome scanner spotting highly repetitive regions on genome.
 
 The program is written in C++ with Visual Studio 2017.
@@ -40,7 +40,7 @@ D2Rscanner E:\code\D2R\CRISPR\genomes\NC_010162.fa  1000  7
 ```
 
 
-## 3. D2R python package
+## 3. D2R python package (Python library)
 A python library for hacking. Written in swig, supporting Win64 and Linux64 environment currently.
 
 Copy files under `release_win_x64` or `release_linux_x64` to your working directory and 

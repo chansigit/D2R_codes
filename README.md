@@ -25,7 +25,7 @@ A genome scanner spotting highly repetitive regions on genome.
 The program is written in C++ with Visual Studio 2017.
 Only standard libraries are used in the single cpp code file.
 
-You can remove the #include "stdafx.h" line in the front of D2R_codes/D2RGenomeScanner/D2Rscanner/D2Rscanner.cpp
+You can remove the #include "stdafx.h" line in the front of `D2R_codes/D2RGenomeScanner/D2Rscanner/D2Rscanner.cpp`
 to compile it with other compilers or IDEs.
 
 * Usage:
